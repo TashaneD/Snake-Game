@@ -6,8 +6,8 @@ import Snake from "./Snake";
 abstract class Player {
   sc: SnakeController;
   //Passes the snakeController into the player that allows them to control the snake
-  constructor(snakerController: SnakeController) {
-    this.sc = snakerController;
+  constructor(snakeController: SnakeController) {
+    this.sc = snakeController;
   }
   //Every player must have a makeTurn method
   abstract makeTurn(): void;

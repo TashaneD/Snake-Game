@@ -31,13 +31,13 @@ class Snake {
     } else if (this.currentDirection === 0) {
       this.currentPosition = new Point(
         this.currentPosition.xcoordinate,
-        this.currentPosition.ycoordinate + numSquares,
+        this.currentPosition.ycoordinate - numSquares,
       );
       // If snake is facing down, decrease y coordinate by num of squares
     } else if (this.currentDirection === 2) {
       this.currentPosition = new Point(
         this.currentPosition.xcoordinate,
-        this.currentPosition.ycoordinate - numSquares,
+        this.currentPosition.ycoordinate + numSquares,
       );
     }
   }
@@ -62,7 +62,7 @@ class Snake {
     } else if (this.currentDirection === 0) {
       this.currentDirection = -1;
     } else if (this.currentDirection === 2) {
-      this.currentDirection = 1;
+      this.currentDirection = -1;
     }
   }
   // Turns snake to the right based on the current direction that the snake may be facing
